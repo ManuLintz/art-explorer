@@ -1,0 +1,12 @@
+:root {
+    --light-pink-color: #FFC0CB;
+    --header-height: 80px;
+    --container-width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    :root {
+        --header-height: 100px;
+        --container-width: 1024px;
+    }
+  }

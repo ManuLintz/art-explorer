@@ -1,6 +1,19 @@
 function App() {
   return (
-   <h1>Setup</h1>
+    <>
+      <header></header>
+      <main>
+        <div className="container">
+          <div className="tiles">
+            {Array.from({ length: 20 }).map((_, index) => (
+              <div key={index} className="tile">
+                {index}
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
 
