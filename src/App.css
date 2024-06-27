@@ -19,22 +19,22 @@ main {
 }
 
 .container {
-  width: var(--container-width);
-  padding: 10px;
+    width: var(--container-width);
+    padding: 10px;
 }
 
 button {
-  background-color: var(--light-pink-color);
-  color: white;
-  border: var(--dark-pink-color) solid 1px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  &:hover {
-    background-color: var(--pink-color);
-  }
-  &:disabled {
-    background-color: var(--gray-pink-color);
-    cursor: not-allowed;
-  }
+    background-color: var(--light-pink-color);
+    color: white;
+    border: var(--dark-pink-color) solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background-color: var(--pink-color);
+    }
+    &:disabled {
+      background-color: var(--gray-pink-color);
+      cursor: not-allowed;
+    }
 }

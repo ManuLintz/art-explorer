@@ -3,13 +3,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 10px;
-  }
+}
   
-  .more-button {
+.more-button {
     height: 40px;
     width: 100%;
-  }
-  .tile {
+}
+.tile {
     width: calc(50% - 5px);
     margin-bottom: 10px;
     height: auto;
@@ -35,38 +35,38 @@
       -webkit-line-clamp: 3;
       overflow: hidden;
       }
-        &:hover {
-          .description {
-          transform: translateY(0);
-          }
+      &:hover {
+        .description {
+        transform: translateY(0);
         }
+      }
       &.skeleton {
         animation: skeleton 1s infinite;
       }
-  }
-  
-  @keyframes skeleton {
+}
+
+@keyframes skeleton {
     0% {
-      background-color: var(--light-pink-color);
+        background-color: var(--light-pink-color);
     }
     50% {
-      background-color: var(--pink-color);
+       background-color: var(--pink-color);
     }
     100% {
-      background-color: var(--light-pink-color);
+       background-color: var(--light-pink-color);
     }
-  }
-  
-  @media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 640px) {
     .tile {
-      width: calc(33% - 5px);
-      margin-bottom: 10px;
+        width: calc(33% - 5px);
+        margin-bottom: 10px;
     }
-  }
-  
-  @media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
     .tile {
-      width: calc(25% - 10px);
-      margin-bottom: 10px;
+        width: calc(25% - 10px);
+        margin-bottom: 10px;
     }
-  }
+}
