@@ -1,4 +1,7 @@
 export default function rewriteImageUrl(url: string, size: number): string {
-  // TODO improve with lastIndexOf and slice
-  return url.replace("=s0", `=s${size}`);
+  const lastOcurrence = url.lastIndexOf("=s0");
+  if (lastOcurrence === -1) {
+    return `${url}=s${size}`;
+  }
+  return `${url.substring(0, lastOcurrence)}=s${size}`;
 }
