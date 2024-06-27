@@ -59,14 +59,14 @@
 
 @media screen and (min-width: 640px) {
     .tile {
-        width: calc(33% - 5px);
+        width: calc(25% - 10px);
         margin-bottom: 10px;
     }
 }
 
 @media screen and (min-width: 768px) {
     .tile {
-        width: calc(25% - 10px);
+        width: calc(20% - 10px);
         margin-bottom: 10px;
     }
 }
