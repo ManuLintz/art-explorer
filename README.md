@@ -1,4 +1,4 @@
-# Phantom - Technical test
+# Worklife - Technical test
 
 This is my take on the Frontend technical test
 
@@ -14,6 +14,6 @@ yarn dev
 ## Dependencies
 The project was initiated with [vite](https://vitejs.dev/) using [this template](https://github.com/fresh-app/fresh-vite-app-react-ts)
 
-I used the [icons](https://www.radix-ui.com/primitives/docs/components/dropdown-menu) from radix, a minimalist and unstyled componenents library
+I used the [icons](https://www.radix-ui.com/icons) from radix, a minimalist and unstyled componenents library
 
 Tests are written with [vitest](https://vitest.dev/)
