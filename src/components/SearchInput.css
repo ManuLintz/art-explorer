@@ -1,0 +1,39 @@
+.search-input {
+    --button-width : 40px;
+    --button-height : 40px;
+    --height : 40px;
+    --input-padding : 3px;
+
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    position: relative;
+
+    input, button {
+        height: var(--height);
+    }
+
+    input {
+        width: 100%;
+        padding: var(--input-padding);
+    }
+    button {
+        width: var(--button-width);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2px;
+    }
+
+
+
+    @media screen and (max-width: 640px) {
+        .submit-button {
+            position: absolute;
+            right: calc(var(--button-width) + var(--input-padding));
+            top: 4px;
+            height: 32px;
+            width: 32px;
+        }
+    }
+}

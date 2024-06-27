@@ -1,0 +1,72 @@
+.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+  }
+  
+  .more-button {
+    height: 40px;
+    width: 100%;
+  }
+  .tile {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    height: auto;
+    background-color: var(--light-pink-color);
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 10px 0 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      transition: 0.5s;
+      transform: translateY(100%);
+      /* clamp to 3 lines */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      }
+        &:hover {
+          .description {
+          transform: translateY(0);
+          }
+        }
+      &.skeleton {
+        animation: skeleton 1s infinite;
+      }
+  }
+  
+  @keyframes skeleton {
+    0% {
+      background-color: var(--light-pink-color);
+    }
+    50% {
+      background-color: var(--pink-color);
+    }
+    100% {
+      background-color: var(--light-pink-color);
+    }
+  }
+  
+  @media screen and (min-width: 640px) {
+    .tile {
+      width: calc(33% - 5px);
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .tile {
+      width: calc(25% - 10px);
+      margin-bottom: 10px;
+    }
+  }

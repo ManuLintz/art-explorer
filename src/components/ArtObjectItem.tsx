@@ -1,6 +1,6 @@
-import rewriteImageUrl from "./utils/rewriteImageUrl";
+import rewriteImageUrl from "@/utils/rewriteImageUrl";
 
-export default function TileItem({
+export default function ArtObjectItem({
   imageUrl,
   description,
 }: {
@@ -12,7 +12,7 @@ export default function TileItem({
       className="tile"
       style={{ backgroundImage: `url(${rewriteImageUrl(imageUrl, 400)})` }}
     >
-      <p>{description}</p>
+      <p className="description">{description}</p>
     </div>
   );
 }

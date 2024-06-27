@@ -1,5 +1,8 @@
 :root {
     --light-pink-color: #FFC0CB;
+    --pink-color: #fb9bab;
+    --dark-pink-color: #bb4c5f;
+    --gray-pink-color: #977278;
     --header-height: 80px;
     --container-width: 100%;
 }
