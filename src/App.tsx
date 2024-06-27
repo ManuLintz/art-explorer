@@ -1,19 +1,22 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import TilesList from "@/TilesList";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <>
-      <header></header>
-      <main>
-        <div className="container">
-          <div className="tiles">
-            {Array.from({ length: 20 }).map((_, index) => (
-              <div key={index} className="tile">
-                {index}
-              </div>
-            ))}
+    <QueryClientProvider client={queryClient}>
+      <>
+        <header></header>
+        <main>
+          <div className="container">
+            <TilesList />
           </div>
-        </div>
-      </main>
-    </>
+        </main>
+      </>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 

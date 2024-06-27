@@ -35,6 +35,7 @@ main {
   margin-bottom: 10px;
   height: auto;
   background-color: tomato;
+  background-size: cover;
   aspect-ratio: 1 / 1;
 }
 
