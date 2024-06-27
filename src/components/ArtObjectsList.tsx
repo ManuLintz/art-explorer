@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from "react";
-import getArtObjects from "@/api/artObjects";
+import { useMemo } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import getArtObjects from "@/api/artObjects";
 import ArtObjectItem from "@/components/ArtObjectItem";
 import ArtObjectsListSkeleton from "@/components/ArtObjectsListSkeleton";
 import Hero from "@/components/layout/Hero";
@@ -17,7 +17,6 @@ function ArtObjectsList({ query }: { query: string }) {
     isFetchingNextPage,
     status,
     hasNextPage,
-    isFetchNextPageError,
     isPaused,
   } = useInfiniteQuery({
     queryKey: ["artObjects", { query }],
@@ -37,14 +36,6 @@ function ArtObjectsList({ query }: { query: string }) {
     [data],
   );
 
-  useEffect(() => {
-    if (isFetchNextPageError) {
-      alert("Error fetching more data");
-    }
-    if (isPaused) {
-      alert("Paused fetching more data");
-    }
-  }, [isFetchNextPageError, isPaused]);
   if (status === "pending") {
     return (
       <div className="tiles">
@@ -86,10 +77,14 @@ function ArtObjectsList({ query }: { query: string }) {
         onClick={() => {
           fetchNextPage();
         }}
-        disabled={!hasNextPage || isFetchingNextPage}
+        disabled={!hasNextPage || isFetchingNextPage || isPaused}
         className="more-button"
       >
-        {isFetchingNextPage ? "..." : hasNextPage ? "More" : "No more results"}
+        {isFetchingNextPage || isPaused
+          ? "..."
+          : hasNextPage
+            ? "More"
+            : "No more results"}
       </button>
     </>
   );
